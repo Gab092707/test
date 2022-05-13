@@ -1,0 +1,80 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+main.Position = UDim2.new(0.364614874, 0, 0.333384216, 0)
+main.Size = UDim2.new(0, 189, 0, 169)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+label.Size = UDim2.new(0, 189, 0, 30)
+label.Font = Enum.Font.SourceSans
+label.Text = " AutoTransfer By Pio"
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.TextSize = 14.000
+
+TextBox.Parent = main
+TextBox.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+TextBox.BorderColor3 = Color3.fromRGB(85, 255, 255)
+TextBox.Position = UDim2.new(0.216931224, 0, 0.213017747, 0)
+TextBox.Size = UDim2.new(0, 107, 0, 21)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Input BankID here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+TextButton.Position = UDim2.new(0.365079373, 0, 0.37869823, 0)
+TextButton.Size = UDim2.new(0, 52, 0, 28)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Withdraw"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Up:Connect(function()
+	local args = {
+		[1] = {
+			[1] = "wew",
+			[2] = {},
+			[3] = 25000000000
+		}
+	}
+
+	workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
+end)
+
+-- Scripts:
+
+local function USWT_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	local wew
+	TextBox.text = wew
+	
+	function value()
+		local args = {
+			[1] = {
+				[1] = "wew",
+				[2] = {},
+				[3] = 25000000000
+			}
+		}
+	end
+	
+end
+coroutine.wrap(USWT_fake_script)()

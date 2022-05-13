@@ -74,6 +74,7 @@ local function USWT_fake_script() -- TextBox.LocalScript
 				[3] = 25000000000
 			}
 		}
+		workspace.__THINGS.__REMOTES:FindFirstChild("bank withdraw"):InvokeServer(unpack(args))
 	end
 	
 end

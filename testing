@@ -49,7 +49,7 @@ TextButton.TextSize = 14.000
 TextButton.MouseButton1Up:Connect(function()
 	local args = {
 		[1] = {
-			[1] = "wew",
+			[1] = wew,
 			[2] = {},
 			[3] = 25000000000
 		}
@@ -69,7 +69,7 @@ local function USWT_fake_script() -- TextBox.LocalScript
 	function value()
 		local args = {
 			[1] = {
-				[1] = "wew",
+				[1] = wew,
 				[2] = {},
 				[3] = 25000000000
 			}
